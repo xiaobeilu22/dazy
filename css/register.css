@@ -1,0 +1,100 @@
+/* logo */
+.register-header{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1200px;
+}
+.register-header > .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.register-main{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1200px;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+
+    padding-left: 240px;
+
+    /* 背景样式 */
+    /* background-color: lightblue; */
+    background: url(../imgs/注册背景.jpg) no-repeat;
+    background-size: 100% auto;
+    border-radius: 50px;
+    height: 500px;
+}
+.register-main .name > h3{
+    font-size: 60px;
+    color: white;
+}
+/* 表单 */
+.form{
+    margin-top: 50px;
+}
+.form > .input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form input{
+    border: none;/*设置无边框*/
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.form input:focus{
+    outline: 2px solid #5e7fef;
+}
+/* 注册按钮 */
+.form > .button{
+    margin-top: 30px;
+}
+.form button{
+    border: none;/*设置无边框*/
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+    background: rgb(94, 127, 239);
+    cursor: pointer;
+}
+.form button:hover{
+    background: #3a5fcc;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+/* 同意协议 */
+.agree{
+    margin-top: 30px;
+}
+.agree input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+.agree a {
+    color: #5e7fef;
+    text-decoration: none;
+}
+.agree a:hover {
+    text-decoration: underline;
+}
+/* 错误提示样式 */
+.error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* 成功提示样式 */
+.success-message {
+    color: #4CAF50;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}

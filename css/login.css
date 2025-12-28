@@ -1,0 +1,172 @@
+/* logo */
+.login-header{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1200px;
+}
+.login-main{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 背景样式 */
+    /* background-color: lightblue; */
+    background: url(../imgs/登录背景.jpg) no-repeat;
+    background-size: 100% auto;
+    border-radius: 50px;
+    height: 500px;
+}
+.login-main > h3{
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    top: 165px;
+}
+.login-right{
+    margin-top: 100px;
+    margin-left: 350px;
+    text-align: center;
+}
+.login-right > .title{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+.login-right > .title h3{
+    color: rgb(140, 189, 229);
+    font-size: 25px;
+
+    cursor: pointer;
+    /* padding-bottom: 5px;
+    border-bottom: 2px solid transparent; */
+}
+.login-right > .title h3.active {
+    color: #5e7fef;
+    border-bottom: 2px solid #5e7fef;
+}
+/* 表单 */
+.form{
+    text-align: center;
+    margin-top: 20px;
+}
+.form > .input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.form input{
+    border: none;/*设置无边框*/
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+    padding-left: 15px;
+}
+.form input:focus {
+    outline: 2px solid #5e7fef;
+}
+/* 记住账号复选框 */
+.form .remember{
+    display: flex;
+    width: 350px;
+    height: 10px;
+}
+.form .remember #remember-me{
+    width: 200px;
+    height: 20px;
+}
+.form .remember label{
+    color: #666; 
+    font-size: 14px;
+} 
+/* 短信登录表单 */
+.sms-code-input{
+    display: flex;
+    align-items: center;
+}
+#get-code-btn {
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    cursor: pointer;
+    background: #5e7fef;
+    color: white;
+}
+#get-code-btn:disabled {
+    background: #ccc !important;
+    cursor: not-allowed;
+}
+/* 登录按钮 */
+.form > .button{
+    margin-top: 20px;
+}
+.form button{
+    border: none;/*设置无边框*/
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+    background: rgb(94, 127, 239);
+    cursor: pointer;
+}
+.form button:hover {
+    background: #3a5fcc;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+/* other部分 */
+.other{
+    text-align: center;
+    margin-top: 30px;
+}
+.other > ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.other li{
+    list-style-type: none;/*去掉前面的黑点*/
+}
+/*分割线*/
+.other ul li + li::before{
+    content: "|";
+    color: rgb(96, 150, 184);
+    margin-right: 10px;
+}
+.other li a{
+    text-decoration: none;/*去下划线*/
+}
+/* 图标 */
+.other ul li a .weixin::before{
+    content: "";
+    display: inline-block;/*既能同行又能设置宽高*/
+    margin-right: 4px;
+    width: 25px;
+    height: 25px;
+    background: url("../imgs/微信.png") no-repeat center;
+    background-size: contain;
+}
+.other ul li a .qq::before{
+    content: "";
+    display: inline-block;/*既能同行又能设置宽高*/
+    margin-right: 4px;
+    width: 25px;
+    height: 25px;
+    background: url("../imgs/qq.png") no-repeat center;
+    background-size: contain;
+}
+.other span{
+    vertical-align: middle;
+}
+/* 错误提示 */
+.error-message {
+    color: #ff4444;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}

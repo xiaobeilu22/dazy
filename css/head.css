@@ -1,0 +1,61 @@
+.head{
+    width: 100%;
+    background: white;
+    height: 130px;
+}
+.head .head-container{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1500px;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head ul li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 40px;
+}
+.head .logo img{
+    margin-right: 55px;
+}
+.head ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.head ul li a:hover{
+    color: lightgreen;
+    border-bottom: 2px solid lightgreen;
+    padding-bottom: 10px;
+}
+/*搜索框*/
+.head .search .input{
+    height: 25px;
+    padding-left: 30px;
+    border: none;/*设置无边框*/
+    border-bottom: 2px solid #f4f4f4;
+    background: url("../uploads/搜索.png") no-repeat 2px center;
+}
+.head .search .input:focus{
+    outline: none;
+}
+/* 购物车 */
+.gouwu{
+    position: relative;
+    margin-left: 20px; 
+}
+.gouwu > span{
+    position: absolute;
+    top: -5px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    
+    height: 15px;
+    width: 20px;
+    border-radius: 50%;
+}

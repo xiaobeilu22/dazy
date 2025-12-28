@@ -1,0 +1,291 @@
+/* 第一二部分 */
+/* 标题部分 */
+.title1{
+    display: flex;
+    align-items:end;
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1230px;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.title1 h3{
+    font-size: 35px;
+}
+.title1 p{
+    margin-left: 10px;
+    font-size: 20px;
+    color: lightgrey;
+    margin-right: auto;/*让p占据剩余空间，把“查看全部”推到右边*/
+}
+.title1 a{
+    text-decoration: none;
+    color: lightgrey;
+    display: flex;
+    font-size: 20px;
+}
+/*箭头*/
+.title1 a span::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    transform: rotate(-135deg);
+
+    margin-top: 9px;
+    margin-left: 4px;
+}
+/* 图片部分 */
+.content .content-container .img1{
+    display: flex;
+    justify-content: center;
+}
+/*图片下面的文字部分*/
+.wenzi{
+    border-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.wenzi .wenzi1{
+    height: 100px;
+    width: 304px;
+    background-color: rgb(190, 246, 190);
+    text-align: center;
+
+    /*让文字垂直居中*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wenzi .wenzi1 p{
+    font-size: 20px;
+}
+.wenzi .wenzi2{
+    height: 100px;
+    width: 304px;
+    background-color: white;
+    text-align: center;
+
+    /*让文字垂直居中*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wenzi .wenzi2 .p1{
+    font-size: 20px;
+}
+.wenzi .wenzi2 .p2{
+    font-size: 15px;
+    color: lightgrey;
+}
+/*热门品牌部分（第三部分）*/
+.content3{
+    width: 100%;
+    height: 450px;
+    background-color: #f3f3f3;
+}
+.content3 .content3-item{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1230px;
+}
+.content3 .title3{
+    display: flex;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    align-items: end;
+}
+.content3 .title3 h3{
+    font-size: 35px;
+}
+.content3 .title3 p{
+    font-size: 20px;
+    margin-left: 10px;
+    color: lightgrey;
+    margin-right: auto;/*让p占据剩余空间*/
+}
+.content3 .tupian3{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+/*左右箭头*/
+.zuoyou{
+    display: flex;
+    gap: 10px;
+}
+/* 直接选中.zuo和.you（直接子div），不选中里面的img元素 */
+.zuoyou > div{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.zuoyou img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.zuo .end,.you .start{
+    transform: rotate(180deg);
+}
+.start{
+    opacity: 1;
+}
+.end{
+    opacity: 0;
+}
+.zuo:hover .end,.you:hover .end{
+    opacity: 1;
+}
+.zuo:hover .start,.you:hover .start{
+    opacity: 0;
+}
+/*第四部分*/
+.content4{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1230px;
+}
+.content4 .title{
+    display: flex;
+    align-items: end;
+    gap: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.content4  .title h3{
+    font-size: 35px;
+    margin-right: auto;/*让h3占据剩余空间，把“查看全部”推到右边*/
+}
+.content4 .title ul{
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+.content4 .title > a{
+    margin-left: 35px;
+    text-decoration: none;/*去除下划线*/
+    color: lightgrey;
+    font-size: 20px;
+
+    display: flex;
+}
+/*箭头*/
+.content4 .title > a span::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    transform: rotate(-135deg);
+
+    margin-top: 9px;
+    margin-left: 4px;
+}
+.content4 .title ul li:hover{
+    background-color: lightgreen;
+}
+.content4 .title ul li a{
+    color: black;
+    text-decoration: none;/*去除下划线*/
+    font-size: 16px;
+}
+.content4 .tupian{
+    display: flex;
+    align-items: flex-start;/*顶部对齐*/
+    justify-content: center;
+    gap: 45px;
+}
+.content4 .tupian .tupian2{
+    /*每行4个*/
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 45px;
+}
+.content4 .tupian .tupian2 img{
+    width: 200px;
+    height: 180px;
+}
+.wenzi4 p{
+    cursor: pointer;
+}
+.wenzi4 p:nth-child(4){
+    color: red;
+}
+/*第五部分*/
+.content5{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1230px; 
+}
+.content5 .title5{
+    display: flex;
+    align-items: end;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.content5 .title5 h3{
+    font-size: 35px;
+    margin-right: auto;/*让h3占据剩余空间，把“查看全部”推到右边*/
+}
+.content5 .title5 a{
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 20px;
+
+    display: flex;
+}
+/*箭头*/
+.content5 .title5 a span::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    transform: rotate(-135deg);
+
+    margin-top: 9px;
+    margin-left: 4px;
+}
+.content .tupian5{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+/* 小图标 */
+.tubiao{
+    display: flex;
+    justify-content: space-around;
+}
+.tubiao > .a{
+    display: flex;
+}
+.a > div > img{
+    width: 15px;
+    height: 15px;
+}
+.a > .first{
+    margin-left: 5px;
+}
+.a > .second{
+    margin-left: 8px;
+}
+.a > .third{
+    margin-left: 230px;
+}
+.a span{
+    color: rgb(162, 161, 161);
+    font-size: 15px;
+    text-align: center;
+}
