@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-width: 1500px;
+            min-height: 600px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">返回首页</a></li>
+                <li><a href="order.html">我的订单</a></li>
+                <li><a href="user.html">会员中心</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li><a href="#"><span class="mobile"></span>手机版</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="login">
+        <div class="login-header">
+            <div class="logo">
+                <img src="./uploads/小兔鲜儿logo.png" alt="小兔鲜儿logo">
+            </div>
+        </div>
+        <div class="login-main">
+            <h3>LOGIN</h3>
+            <!-- <div class="login-left">
+                <h3>小兔鲜儿扫码登录</h3>
+                <img src="../imgs/登录二维码.png" alt="">
+            </div> -->
+            <div class="login-right">
+                <div class="title">
+                    <h3 class="active" id="password-tab">密码登录</h3>
+                    <h3 id="sms-tab">短信登录</h3>
+                </div>
+                <!-- 密码登录表单 -->
+                <div class="form" id="password-form">
+                    <div class="input">
+                        <input type="text" id="account" placeholder="账号名/手机号">
+                        <div id="account-error" class="error-message"></div>
+
+                        <input type="password" id="login-password" placeholder="密码">
+                        <diV id="login-password-error" class="error-message"></diV>
+                        
+                        <!-- 记住我复选框 -->
+                        <div class="remember">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">记住账号</label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button id="login-btn">登录</button>
+                    </div>
+                </div>
+                <!-- 短信登录表单 -->
+                <div class="form" id="sms-form" style="display: none;">
+                    <div class="input">
+                        <input type="tel" id="sms-phone" placeholder="手机号">
+                        <div id="sms-phone-error" class="error-message"></div>
+                        
+                        <div class="sms-code-input">
+                            <input type="text" id="sms-code" placeholder="验证码" style="width: 200px;">
+                            <button id="get-code-btn" style="width: 140px; margin-left: 10px; background: #ccc;">获取验证码</button>
+                        </div>
+                        <div id="sms-code-error" class="error-message"></div>
+                    </div>
+                    
+                    <div class="button">
+                        <button id="sms-login-btn">登录</button>
+                    </div>
+                </div>
+                <div class="other">
+                    <ul>
+                        <li><a href="#"><span class="weixin"></span>微信登录</a></li>
+                        <li><a href="#"><span class="qq"></span>QQ登录</a></li>
+                        <li><a href="#">忘记密码</a></li>
+                        <li><a href="register.html">立即注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="one">
+            <div class="icon-item">
+                <div class="sprite sprite1 "></div>
+                <li>价格亲民</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite2 "></div>
+                <li>物流快捷</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite3 "></div>
+                <li>品质新鲜</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite4 "></div>
+                <li>售后无忧</li>
+            </div>
+        </div>
+        <hr/>
+        <div class="two">
+            <div class="foot_wenzi">
+                <ul class="ul1">
+                    <li>购物指南</li>
+                    <li>配送方式</li>
+                    <li>关于我们</li>
+                    <li>售后服务</li>
+                    <li>服务热线</li>
+                </ul>
+                <ul class="ul2">
+                    <li>购物流程</li>
+                    <li>配送运费</li>
+                    <li>平台规则</li>
+                    <li>售后政策</li>
+                    <li>在线客服<img src="/uploads/客服.png" alt=""></li>
+
+                    <li>支付方式</li>
+                    <li>配送范围</li>
+                    <li>联系我们</li>
+                    <li>退款说明</li>
+                    <li>客服电话 400-0000-000</li>
+
+                    <li>售后规则</li>
+                    <li>配送时间</li>
+                    <li>问题反馈</li>
+                    <li>取消订单</li>
+                    <li>工作时间 周一至周日 8:00-18:00</li>
+                </ul>
+            </div>
+            <div class="foot_tupian">
+                <div>
+                    <img src="./images/wechat.png" alt="">
+                    <li>微信公众号</li>
+                </div>
+                <div>
+                    <img src="./images/app.png" alt="">
+                    <li>APP下载二维码</li>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">配送与验收</a></li>
+                <li><a href="#">商务合作</a></li>
+                <li><a href="#">搜索推荐</a></li>
+            </ul>
+        </div>
+        <div class="name">
+            <ul>
+                <li>学号：25216950301</li>
+                <li>姓名：方丹琪</li>
+                <li>班级：25计科专升本3班</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // 切换登录方式
+    const passwordTab = document.getElementById('password-tab');
+    const smsTab = document.getElementById('sms-tab');
+    const passwordForm = document.getElementById('password-form');
+    const smsForm = document.getElementById('sms-form');
+
+    passwordTab.addEventListener('click', function() {
+        passwordTab.classList.add('active');
+        smsTab.classList.remove('active');
+        passwordForm.style.display = 'block';
+        smsForm.style.display = 'none';
+        clearErrors();
+    });
+
+    smsTab.addEventListener('click', function() {
+        smsTab.classList.add('active');
+        passwordTab.classList.remove('active');
+        smsForm.style.display = 'block';
+        passwordForm.style.display = 'none';
+        clearErrors();
+    });
+
+    // 获取验证码功能
+    let countdown = 60;
+    let timer = null;
+
+    document.getElementById('get-code-btn')?.addEventListener('click', function() {
+        const phone = document.getElementById('sms-phone').value.trim();
+        const btn = this;
+        
+        if (!phone) {
+            showError('sms-phone-error', '请输入手机号');
+            return;
+        }
+        
+        if (!/^1[3-9]\d{9}$/.test(phone)) {
+            showError('sms-phone-error', '手机号格式不正确');
+            return;
+        }
+        
+        // 模拟发送验证码
+        btn.disabled = true;
+        btn.style.background = '#ccc';
+        
+        timer = setInterval(() => {
+            countdown--;
+            btn.textContent = `${countdown}秒后重新获取`;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                btn.disabled = false;
+                btn.textContent = '获取验证码';
+                btn.style.background = '#5e7fef';
+                countdown = 60;
+            }
+        }, 1000);
+        
+        // 模拟验证码（实际应该由后端发送）
+        const code = Math.floor(100000 + Math.random() * 900000);
+        console.log(`验证码发送至 ${phone}: ${code}`);
+        localStorage.setItem('sms_code', code.toString());
+    });
+
+    // 密码登录功能
+    document.getElementById('login-btn').addEventListener('click', function() {
+        const account = document.getElementById('account').value.trim();
+        const password = document.getElementById('login-password').value.trim();
+        const rememberMe = document.getElementById('remember-me')?.checked || false;
+        clearErrors();
+        if (!account) {
+            showError('account-error', '请输入账号');
+            return;
+        }
+        if (!password) {
+            showError('login-password-error', '请输入密码');
+            return;
+        }
+        // 从本地存储获取用户数据
+        const users = JSON.parse(localStorage.getItem('xiaotu_users') || '[]');
+        // 查找用户（支持手机号或用户名登录）
+        const user = users.find(u => 
+            u.phone === account || 
+            (u.nickname && u.nickname === account)
+        );
+        if (!user) {
+            showError('account-error', '账号不存在');
+            return;
+        }
+        if (user.password !== password) {
+            showError('login-password-error', '密码错误');
+            return;
+        }
+        // 登录成功
+        const userInfo = {
+            phone: user.phone,
+            nickname: user.nickname,
+            loginTime: new Date().toISOString()
+        };
+        localStorage.setItem('xiaotu_current_user', JSON.stringify(userInfo));
+        // 记住账号
+        if (rememberMe) {
+            localStorage.setItem('remembered_account', account);
+        } else {
+            localStorage.removeItem('remembered_account');
+        }
+        // 显示成功消息
+        if (typeof UserManager !== 'undefined' && UserManager.showToast) {
+            UserManager.showToast('登录成功！');
+        } else {
+            alert('登录成功！');
+        }
+        
+        // 跳转到首页
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1000);
+    });
+
+    // 短信登录功能
+    document.getElementById('sms-login-btn').addEventListener('click', function() {
+        const phone = document.getElementById('sms-phone').value.trim();
+        const code = document.getElementById('sms-code').value.trim();
+        clearErrors();
+        if (!phone) {
+            showError('sms-phone-error', '请输入手机号');
+            return;
+        }
+        if (!code) {
+            showError('sms-code-error', '请输入验证码');
+            return;
+        }
+        // 验证码验证
+        const storedCode = localStorage.getItem('sms_code');
+        if (!storedCode || code !== storedCode) {
+            showError('sms-code-error', '验证码错误');
+            return;
+        }
+        // 查找用户
+        const users = JSON.parse(localStorage.getItem('xiaotu_users') || '[]');
+        const user = users.find(u => u.phone === phone);
+        
+        if (!user) {
+            showError('sms-phone-error', '该手机号未注册');
+            return;
+        }
+        // 登录成功
+        const userInfo = {
+            phone: user.phone,
+            nickname: user.nickname,
+            loginTime: new Date().toISOString()
+        };
+        
+        localStorage.setItem('xiaotu_current_user', JSON.stringify(userInfo));
+        localStorage.removeItem('sms_code');
+        
+        // 显示成功消息
+        if (typeof UserManager !== 'undefined' && UserManager.showToast) {
+            UserManager.showToast('登录成功！');
+        } else {
+            alert('登录成功！');
+        }
+        
+        // 跳转到首页
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1000);
+    });
+
+    // 加载记住的账号
+    document.addEventListener('DOMContentLoaded', function() {
+        const rememberedAccount = localStorage.getItem('remembered_account');
+        if (rememberedAccount) {
+            const accountInput = document.getElementById('account');
+            if (accountInput) {
+                accountInput.value = rememberedAccount;
+            }
+            const rememberMeCheckbox = document.getElementById('remember-me');
+            if (rememberMeCheckbox) {
+                rememberMeCheckbox.checked = true;
+            }
+        }
+        
+        // 更新导航栏状态
+        if (typeof UserManager !== 'undefined' && UserManager.updateNavbar) {
+            UserManager.updateNavbar();
+        }
+    });
+
+    function showError(elementId, message) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.textContent = message;
+            element.style.display = 'block';
+        }
+    }
+
+    function clearErrors() {
+        const errors = document.querySelectorAll('.error-message');
+        errors.forEach(error => {
+            error.style.display = 'none';
+            error.textContent = '';
+        });
+    }
+</script>
+</html>

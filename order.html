@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-width: 1500px;
+            min-height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">返回首页</a></li>
+                <li><a href="user.html">会员中心</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li><a href="#"><span class="mobile"></span>手机版</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="order">
+        <div class="order-header">
+            <h3>会员中心</h3>
+        </div>
+        <div class="order-main">
+            <div class="order-left">
+                <div class="one">
+                    <img src="./imgs/头像.png" alt="">
+                </div>
+                <div class="two">
+                    <ul>
+                        <li><a href="user.html">个人资料</a></li>
+                        <li class="active" id="order-btn"><a href="#">我的订单</a></li>
+                        <li id="address-btn"><a href="#">收货地址</a></li>
+                        <li id="favorite-btn"><a href="#">我的收藏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-right">
+                <!-- 我的订单页面 -->
+                <div id="order-page">
+                    <div class="title">
+                        <h3>我的订单</h3>
+                    </div>
+                    <div class="message">
+                        <div class="one">
+                            <ul>
+                                <li><a href="#">全部</a></li>
+                                <li><a href="#">待付款</a></li>
+                                <li><a href="#">待发货</a></li>
+                                <li><a href="#">待收货</a></li>
+                                <li><a href="#">已完成</a></li>
+                                <li><a href="#">已取消</a></li>
+                            </ul>
+                        </div>
+                        <div class="two">
+                            <div>
+                                <div class="num">
+                                    <p>订单号：125815485234845135</p>
+                                    <p>待付款</p>
+                                </div>
+                                <div class="order1">
+                                    <img src="./uploads/手抓饼.png" alt="">
+                                    <div class="good">
+                                        <p class="name">手抓饼</p>
+                                        <p class="price">￥89.9</p>
+                                    </div>
+                                </div>
+                                <div class="sum">
+                                    <p>共1件商品，总计：<span>￥89.9</span></p>
+                                    <div class="button">
+                                        <button>查看详情</button>
+                                        <button>立即付款</button>
+                                        <button>删除订单</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 收货地址页 -->
+                <div id="address-page" style="display: none;">
+                    <div class="title">
+                        <h3>收货地址</h3>
+                    </div>
+                    <div class="message">
+                        <div>
+                            <h2>收货人：</h2>
+                            <input type="text" placeholder="请输入收货人姓名">
+                        </div>
+                        <div>
+                            <h2>手机号：</h2>
+                            <input type="text" placeholder="请输入手机号">
+                        </div>
+                        <div>
+                            <h2>地区：</h2>
+                            <input type="text" placeholder="请选择省市区">
+                        </div>
+                        <div>
+                            <h2>详细地址：</h2>
+                            <input type="text" placeholder="请输入详细地址">
+                        </div>
+                        <div>
+                            <h2>默认地址：</h2>
+                            <input type="checkbox">设为默认地址
+                        </div>
+                        <div>
+                            <button id="save-address-btn">保存地址</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 我的收藏页 -->
+                <div id="favorite-page" style="display: none;">
+                    <div class="title">
+                        <h3>我的收藏</h3>
+                    </div>
+                    <div class="message">
+                        <p style="padding: 20px; text-align: center;">暂无收藏商品</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="one">
+            <div class="icon-item">
+                <div class="sprite sprite1 "></div>
+                <li>价格亲民</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite2 "></div>
+                <li>物流快捷</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite3 "></div>
+                <li>品质新鲜</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite4 "></div>
+                <li>售后无忧</li>
+            </div>
+        </div>
+        <hr/>
+        <div class="two">
+            <div class="foot_wenzi">
+                <ul class="ul1">
+                    <li>购物指南</li>
+                    <li>配送方式</li>
+                    <li>关于我们</li>
+                    <li>售后服务</li>
+                    <li>服务热线</li>
+                </ul>
+                <ul class="ul2">
+                    <li>购物流程</li>
+                    <li>配送运费</li>
+                    <li>平台规则</li>
+                    <li>售后政策</li>
+                    <li>在线客服<img src="/uploads/客服.png" alt=""></li>
+
+                    <li>支付方式</li>
+                    <li>配送范围</li>
+                    <li>联系我们</li>
+                    <li>退款说明</li>
+                    <li>客服电话 400-0000-000</li>
+
+                    <li>售后规则</li>
+                    <li>配送时间</li>
+                    <li>问题反馈</li>
+                    <li>取消订单</li>
+                    <li>工作时间 周一至周日 8:00-18:00</li>
+                </ul>
+            </div>
+            <div class="foot_tupian">
+                <div>
+                    <img src="./images/wechat.png" alt="">
+                    <li>微信公众号</li>
+                </div>
+                <div>
+                    <img src="./images/app.png" alt="">
+                    <li>APP下载二维码</li>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">配送与验收</a></li>
+                <li><a href="#">商务合作</a></li>
+                <li><a href="#">搜索推荐</a></li>
+            </ul>
+        </div>
+        <div class="name">
+            <ul>
+                <li>学号：25216950301</li>
+                <li>姓名：方丹琪</li>
+                <li>班级：25计科专升本3班</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // 在页面加载时显示当前用户信息
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = JSON.parse(localStorage.getItem('xiaotu_current_user'));
+        
+        if (!currentUser) {
+            // 未登录，跳转到登录页面
+            alert('请先登录');
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        // 更新用户头像显示（user.html）
+        const avatarImg = document.querySelector('.user-left .one img')|| 
+                      document.querySelector('.order-left .one img');
+        if (avatarImg) {
+            // 这里可以显示用户昵称首字母作为头像
+            avatarImg.alt = `${currentUser.nickname}的头像`;
+        }
+        
+        // 更新用户信息（user.html）
+        const nicknameInput = document.querySelector('input[placeholder="q"]');
+        if (nicknameInput) {
+            nicknameInput.value = currentUser.nickname;
+        }
+        
+        const phoneInput = document.querySelector('input[placeholder=""]');
+        if (phoneInput && phoneInput.previousElementSibling.textContent.includes('手机号')) {
+            phoneInput.value = currentUser.phone;
+        }
+    });
+
+    // 切换会员中心的页面
+    const orderBtn = document.getElementById('order-btn');
+    const addressBtn = document.getElementById('address-btn');
+    const favoriteBtn = document.getElementById('favorite-btn');
+    const orderPage = document.getElementById('order-page');
+    const addressPage = document.getElementById('address-page');
+    const favoritePage = document.getElementById('favorite-page');
+
+    orderBtn.addEventListener('click', function() {
+        switchTab('order');
+    });
+    
+    addressBtn.addEventListener('click', function() {
+        switchTab('address');
+    });
+    
+    favoriteBtn.addEventListener('click', function() {
+        switchTab('favorite');
+    });
+    
+    function switchTab(tabName) {
+        // 重置所有页面的显示状态
+        orderPage.style.display = 'none';
+        addressPage.style.display = 'none';
+        favoritePage.style.display = 'none';
+        
+        // 重置所有标签的激活状态
+        orderBtn.classList.remove('active');
+        addressBtn.classList.remove('active');
+        favoriteBtn.classList.remove('active');
+        
+        // 显示选中的页面并激活对应的标签
+        switch(tabName) {
+            case 'order':
+                orderPage.style.display = 'block';
+                orderBtn.classList.add('active');
+                break;
+            case 'address':
+                addressPage.style.display = 'block';
+                addressBtn.classList.add('active');
+                break;
+            case 'favorite':
+                favoritePage.style.display = 'block';
+                favoriteBtn.classList.add('active');
+                break;
+        }
+    }
+
+    // 保存个人资料
+    document.getElementById('save-personal-btn')?.addEventListener('click', function() {
+        const currentUser = UserManager.getCurrentUser();
+        if (!currentUser) return;
+        
+        const userData = {
+            nickname: document.querySelector('input[placeholder="q"]').value,
+            gender: document.getElementById('gender').value,
+            region: document.querySelector('input[placeholder="请输入地区"]').value,
+            phone: document.querySelector('input[placeholder="请输入手机号"]').value,
+            signature: document.querySelector('input[placeholder="请输入个性签名"]').value,
+            updatedAt: new Date().toISOString()
+        };
+        
+        // 更新当前用户信息
+        const updatedUser = { ...currentUser, ...userData };
+        localStorage.setItem('xiaotu_current_user', JSON.stringify(updatedUser));
+        
+        // 保存完整用户数据
+        localStorage.setItem(`user_${currentUser.phone}`, JSON.stringify(userData));
+        
+        alert('个人信息保存成功！');
+    });
+
+    // 保存收货地址
+    document.getElementById('save-address-btn')?.addEventListener('click', function() {
+        const addressData = {
+            recipient: document.querySelector('#address-page input[placeholder="请输入收货人姓名"]').value,
+            phone: document.querySelector('#address-page input[placeholder="请输入手机号"]').value,
+            region: document.querySelector('#address-page input[placeholder="请选择省市区"]').value,
+            detail: document.querySelector('#address-page input[placeholder="请输入详细地址"]').value,
+            isDefault: document.querySelector('#address-page input[type="checkbox"]').checked
+        };
+        
+        // 验证数据
+        if (!addressData.recipient || !addressData.phone || !addressData.detail) {
+            alert('请填写完整信息！');
+            return;
+        }
+        
+        // 保存地址到本地存储
+        const currentUser = UserManager.getCurrentUser();
+        if (currentUser) {
+            let addresses = JSON.parse(localStorage.getItem(`addresses_${currentUser.phone}`) || '[]');
+            addresses.push(addressData);
+            localStorage.setItem(`addresses_${currentUser.phone}`, JSON.stringify(addresses));
+            alert('地址保存成功！');
+            
+            // 清空表单
+            document.querySelectorAll('#address-page input[type="text"]').forEach(input => {
+                input.value = '';
+            });
+            document.querySelector('#address-page input[type="checkbox"]').checked = false;
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-width: 1500px;
+            min-height: 600px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">返回首页</a></li>
+                <li><a href="order.html">我的订单</a></li>
+                <li><a href="user.html">会员中心</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li><a href="#"><span class="mobile"></span>手机版</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="register">
+        <div class="register-header">
+            <div class="header">
+                <img src="./uploads/小兔鲜儿logo.png" alt="小兔鲜儿logo">
+                <p>已有账号？<a href="login.html">请登录></a></p>
+            </div>
+        </div>
+        <div class="register-main">
+            <div class="name">
+                <h3>REGISTER</h3>
+            </div>
+            <div class="form">
+                <div class="input">
+                    <input type="tel" id="phone" placeholder="请输入手机号" maxlength="11">
+                    <div id="phone-error" class="error-message"></div>
+
+                    <input type="password" id="password" placeholder="密码">
+                    <div id="password-error" class="error-message"></div>
+
+                    <input type="password" id="confirm-password" placeholder="确认密码">
+                    <div id="confirm-error" class="error-message"></div>
+                </div>
+                <div class="button">
+                    <button id="register-btn">注册</button>
+                </div>
+            </div>
+            <div class="agree">
+                <input type="checkbox" id="agree-checkbox">
+                <label for="agree-checkbox">我已阅读并同意<a href="#" id="protocol-link">《小兔鲜儿用户服务协议和隐私政策》</a></label>
+                <div id="agree-error" class="error-message"></div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="one">
+            <div class="icon-item">
+                <div class="sprite sprite1 "></div>
+                <li>价格亲民</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite2 "></div>
+                <li>物流快捷</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite3 "></div>
+                <li>品质新鲜</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite4 "></div>
+                <li>售后无忧</li>
+            </div>
+        </div>
+        <hr/>
+        <div class="two">
+            <div class="foot_wenzi">
+                <ul class="ul1">
+                    <li>购物指南</li>
+                    <li>配送方式</li>
+                    <li>关于我们</li>
+                    <li>售后服务</li>
+                    <li>服务热线</li>
+                </ul>
+                <ul class="ul2">
+                    <li>购物流程</li>
+                    <li>配送运费</li>
+                    <li>平台规则</li>
+                    <li>售后政策</li>
+                    <li>在线客服<img src="/uploads/客服.png" alt=""></li>
+
+                    <li>支付方式</li>
+                    <li>配送范围</li>
+                    <li>联系我们</li>
+                    <li>退款说明</li>
+                    <li>客服电话 400-0000-000</li>
+
+                    <li>售后规则</li>
+                    <li>配送时间</li>
+                    <li>问题反馈</li>
+                    <li>取消订单</li>
+                    <li>工作时间 周一至周日 8:00-18:00</li>
+                </ul>
+            </div>
+            <div class="foot_tupian">
+                <div>
+                    <img src="./images/wechat.png" alt="">
+                    <li>微信公众号</li>
+                </div>
+                <div>
+                    <img src="./images/app.png" alt="">
+                    <li>APP下载二维码</li>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">配送与验收</a></li>
+                <li><a href="#">商务合作</a></li>
+                <li><a href="#">搜索推荐</a></li>
+            </ul>
+        </div>
+        <div class="name">
+            <ul>
+                <li>学号：25216950301</li>
+                <li>姓名：方丹琪</li>
+                <li>班级：25计科专升本3班</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // 注册功能
+    document.getElementById('register-btn').addEventListener('click', function() {
+        // 获取表单值
+        const phone = document.getElementById('phone').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const confirmPassword = document.getElementById('confirm-password').value.trim();
+        const agreeCheckbox = document.getElementById('agree-checkbox').checked;
+        // 清除之前的错误信息
+        clearErrors();
+        // 验证
+        let isValid = true;
+        // 验证手机号
+        const phoneError = FormValidator.validatePhone(phone);
+        if (phoneError) {
+            showError('phone-error', phoneError);
+            isValid = false;
+        }
+        // 验证密码
+        const passwordError = FormValidator.validatePassword(password);
+        if (passwordError) {
+            showError('password-error', passwordError);
+            isValid = false;
+        }
+        // 验证确认密码
+        const confirmError = FormValidator.validateConfirmPassword(password, confirmPassword);
+        if (confirmError) {
+            showError('confirm-error', confirmError);
+            isValid = false;
+        }
+        // 验证协议
+        if (!agreeCheckbox) {
+            showError('agree-error', '请阅读并同意协议');
+            isValid = false;
+        }
+        
+        if (isValid) {
+            // 检查手机号是否已注册
+            const users = JSON.parse(localStorage.getItem('xiaotu_users') || '[]');
+            const userExists = users.find(user => user.phone === phone);
+            if (userExists) {
+                showError('phone-error', '该手机号已注册');
+                return;
+            }
+            // 保存用户信息
+            const newUser = {
+                phone: phone,
+                password: password,
+                nickname: '用户' + phone.substring(7, 11), // 取手机号后4位
+                registerTime: new Date().toISOString(),
+                gender: '',
+                region: '',
+                signature: ''
+            };
+            users.push(newUser);
+            localStorage.setItem('xiaotu_users', JSON.stringify(users));
+            // 设置当前登录用户
+            localStorage.setItem('xiaotu_current_user', JSON.stringify({
+                phone: phone,
+                nickname: newUser.nickname,
+                loginTime: new Date().toISOString()
+            }));
+            // 显示成功消息
+            UserManager.showToast('注册成功！正在跳转到首页...');
+            // 2秒后跳转到首页
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+    });
+
+    // 服务协议链接点击事件
+    document.getElementById('protocol-link')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('这里是《小兔鲜儿用户服务协议和隐私政策》内容');
+    });
+
+    function showError(elementId, message) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.textContent = message;
+            element.style.display = 'block';
+        }
+    }
+
+    function clearErrors() {
+        const errors = document.querySelectorAll('.error-message');
+        errors.forEach(error => {
+            error.style.display = 'none';
+            error.textContent = '';
+        });
+    }
+
+    // 页面加载时自动聚焦到手机号输入框
+    document.addEventListener('DOMContentLoaded', function() {
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.focus();
+        }
+    });
+</script>
+</html>
