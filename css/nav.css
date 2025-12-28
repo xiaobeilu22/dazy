@@ -1,0 +1,115 @@
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    overflow: hidden;
+}
+.nav .nav-container{
+    /*放大缩小不影响页面布局*/
+    margin: 0 auto;
+    width: 1500px;
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav ul{
+    margin-right: 140px;
+}
+.nav ul .login{
+    border: 1px solid white;
+    border-radius: 5px;/*圆角*/
+}
+.nav ul li{
+    list-style-type: none; /* 去除小黑点 */
+    display: inline-block;/*改横向*/
+    margin-left: 8px; 
+    font-size: 14px; 
+}
+/*分割线*/
+.nav ul li + li::before{
+    content: "|";
+    color: grey;
+    margin-right: 15px;
+}
+.nav ul li a{
+    text-decoration: none;/*去下划线*/
+    color: white;
+}
+.nav ul li a:hover{
+    color: green;
+}
+/*手机图片*/
+.nav ul li span::before{
+    content: "";
+    display: inline-block;/*既能同行又能设置宽高*/
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    background: url("../uploads/手机.png") no-repeat center;
+}
+.nav ul li span{
+    vertical-align: middle;
+}
+
+/* 添加用户登录状态样式 */
+.nav ul .login:hover{
+    background: rgba(255, 255, 255, 0.1);
+}
+/* 用户登录后的样式 */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+.user-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.logout-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.logout-btn:hover {
+    background: white;
+    color: black;
+}
+/* 解决导航栏用户信息显示时的布局问题 */
+.nav ul li.user-info-container {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.nav ul li.user-info-container .user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 确保登录/用户信息区域不出现分割线 */
+.nav ul li.user-info-container + li::before {
+    content: "|";
+    color: grey;
+    margin-right: 15px;
+}
+
+/* 修复用户信息容器内的文字样式 */
+.user-info span {
+    font-size: 14px;
+    color: white;
+}
