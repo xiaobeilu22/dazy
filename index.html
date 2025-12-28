@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/foot.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-width: 1500px;
+            min-height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <ul>
+                <li class="login"><a href="login.html">请先登录</a></li>
+                <li><a href="register.html">免费注册</a></li>
+                <li><a href="order.html">我的订单</a></li>
+                <li><a href="user.html">会员中心</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li><a href="#"><span class="mobile"></span>手机版</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="head">
+        <div class="head-container">
+            <div class="logo">
+                <img src="./uploads/小兔鲜儿logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">生鲜</a></li>
+                <li><a href="#">美食</a></li>
+                <li><a href="#">餐厨</a></li>
+                <li><a href="#">电器</a></li>
+                <li><a href="#">家居</a></li>
+                <li><a href="#">洗护</a></li>
+                <li><a href="#">孕婴</a></li>
+                <li><a href="#">服装</a></li>
+            </ul>
+            <div class="search">
+                <input class="input" type="search" placeholder="搜一搜"/>
+            </div>
+            <div class="gouwu">
+                <img src="uploads/购物 车1.png" alt="">
+                <span>22</span>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-container">
+            <div class="left">
+                <ul>
+                    <li>生鲜&emsp;水果 蔬菜<span></span></li>
+                    <li>美食&emsp;面点 干果<span></span></li>
+                    <li>餐厨&emsp;数码产品<span></span></li>
+                    <li>电器&emsp;床品 四件套 被枕<span></span></li>
+                    <li>居家&emsp;奶粉 玩具 辅食<span></span></li>
+                    <li>洗护&emsp;洗发 洗护 美妆<span></span></li>
+                    <li>孕婴&emsp;奶粉 玩具<span></span></li>
+                    <li>服饰&emsp;女装 男装<span></span></li>
+                    <li>杂货&emsp;户外 图书<span></span></li>
+                    <li>品牌&emsp;品牌制造<span></span></li>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="lunbo">
+                    <!-- 轮播图片 -->
+                    <div class="items">
+                        <div class="item">
+                            <img src="./uploads/首页-自然造物 Made in Nature-淘宝网.png">
+                        </div>
+                        <div class="item">
+                            <img src="./images/1.png">
+                        </div>
+                        <div class="item">
+                            <img src="./iu/iu2.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="./iu/iu3.jpg">
+                        </div>
+                        <div class="item">
+                            <img src="./iu/iu4.jpg"> 
+                        </div>
+                        <div class="item">
+                            <img src="./iu/iu5.jpg">
+                        </div>
+                    </div>
+                    <!-- 方向 -->
+                    <button class="prev"></button>
+                    <button class="next"></button>
+                    <!-- 点 -->
+                    <div class="dots">
+                        <li class="active" onclick="jumpToSlide(0)"></li>
+                        <li onclick="jumpToSlide(1)"></li>
+                        <li onclick="jumpToSlide(2)"></li>
+                        <li onclick="jumpToSlide(3)"></li>
+                        <li onclick="jumpToSlide(4)"></li>
+                        <li onclick="jumpToSlide(5)"></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-container">
+            <!-- 第一部分 -->
+            <div class="title1">
+                <h3>新鲜好物</h3>
+                <p>新鲜出炉 品质靠谱</p>
+                <a href="#">查看全部<span></span></a>
+            </div>
+            <div class="img1">
+                <div class="tupian">
+                    <img src="./uploads/新鲜好物1.png" alt="">
+                    <img src="./uploads/新鲜好物2.png" alt="">
+                    <img src="./uploads/新鲜好物3.png" alt="">
+                    <img src="./uploads/新鲜好物4.png" alt="">
+                </div>
+            </div>
+            <div class="wenzi">
+                <div class="wenzi1">
+                    <p>KN95级莫兰迪防护口罩</p>
+                    <p>￥79</p>
+                </div>
+                <div class="wenzi1">
+                    <p>紫檀外独板三层普洱茶盒</p>
+                    <p>￥566</p>
+                </div>
+                <div class="wenzi1">
+                    <p>法拉蒙高颜值记事本可定制</p>
+                    <p>￥58</p>
+                </div>
+                <div class="wenzi1">
+                    <p>科技布布艺沙发</p>
+                    <p>￥3579</p>
+                </div>
+            </div>
+            <!-- 第二部分 -->
+            <div class="title1">
+                <h3>人气推荐</h3>
+                <p>人气爆款 不容错过</p>
+                <a href="#">查看全部<span></span></a>
+            </div>
+            <div class="img1">
+                <div class="tupian">
+                    <img src="./uploads/人气推荐1.png" alt="">
+                    <img src="./uploads/人气推荐2.png" alt="">
+                    <img src="./uploads/人气推荐3.png" alt="">
+                    <img src="./uploads/人气推荐4.png" alt="">
+                </div>
+            </div>
+            <div class="wenzi">
+                <div class="wenzi2">
+                    <p class="p1">特惠推荐</p>
+                    <p class="p2">我猜得到 你的需要</p>
+                </div>
+                <div class="wenzi2">
+                    <p class="p1">爆款推荐</p>
+                    <p class="p2">人气好物推荐</p>
+                </div>
+                <div class="wenzi2">
+                    <p class="p1">节日礼品一站买全</p>
+                    <p class="p2">编辑尽心整理推荐</p>
+                </div>
+                <div class="wenzi2">
+                    <p class="p1">鲜花园艺</p>
+                    <p class="p2">给生活增加仪式感</p>
+                </div>
+            </div>
+            <!-- 第三部分 -->
+            <div class="content3">
+                <div class="content3-item">
+                    <div class="title3">
+                        <h3>热门品牌</h3>
+                        <p>国际经典 品质认证</p>
+                        <div class="zuoyou">
+                            <div class="zuo">
+                                <img class="start" src="./uploads/left.png" alt="">
+                                <img class="end" src="./uploads/right.png" alt="">
+                            </div>
+                            <div class="you">
+                                <img class="start" src="./uploads/left.png" alt="">
+                                <img class="end" src="./uploads/right.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tupian3">
+                        <img src="./uploads/热门品牌1.png" alt="">
+                        <img src="./uploads/热门品牌2.png" alt="">
+                        <img src="./uploads/热门品牌3.png" alt="">
+                        <img src="./uploads/热门品牌4.png" alt="">
+                        <img src="./uploads/热门品牌5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- 第四部分 -->
+            <div class="content4">
+                <!-- 生鲜部分 -->
+                <div class="title">
+                    <h3>生鲜</h3>
+                    <ul>
+                        <li><a href="#">热门</a></li>
+                        <li><a href="#">蔬菜</a></li>
+                        <li><a href="#">肉禽蛋</a></li>
+                        <li><a href="#">水果</a></li>
+                        <li><a href="#">海鲜</a></li>
+                        <li><a href="#">零食</a></li>
+                        <li><a href="#">饮料</a></li>
+                    </ul>
+                    <a href="#">查看全部<span></span></a>
+                </div>
+                <div class="tupian">
+                    <div class="tupian1">
+                        <img src="./uploads/商品介绍卡片生鲜.png" alt="">
+                    </div>
+                    <div class="tupian2">
+                        <div class="tupian2-item">
+                            <img src="./uploads/手抓饼.png" alt="">
+                            <div class="wenzi4">
+                                <p>双味千层，手抓饼烤肉组合</p>
+                                <p>240g/袋 4片装</p>
+                                <p>加热即食</p>
+                                <p>￥89.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/馒头.png" alt="">
+                            <div class="wenzi4">
+                                <p>云南甘蔗慢熬红糖馒头</p>
+                                <p>220g/袋 5个装</p>
+                                <p>加热即食</p>
+                                <p>￥9.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/小圆饼.png" alt="">
+                            <div class="wenzi4">
+                                <p>日式风味小圆饼</p>
+                                <p>圆形【海盐味】</p>
+                                <p>糖果零食</p>
+                                <p>￥588.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/面包.png" alt="">
+                            <div class="wenzi4">
+                                <p>全麦奶油浓香小面包</p>
+                                <p>50g*12袋</p>
+                                <p>美味西点</p>
+                                <p>￥69.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/大福.png" alt="">
+                            <div class="wenzi4">
+                                <p>秘制外皮五福摩提大福点心</p>
+                                <p>150g/盒</p>
+                                <p>美味西点</p>
+                                <p>￥39.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/蜂蜜.png" alt="">
+                            <div class="wenzi4">
+                                <p>水果面膜韩国蜂蜜柚子茶</p>
+                                <p>560g/瓶</p>
+                                <p>冲调饮品</p>
+                                <p>￥89.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/巧克力.png" alt="">
+                            <div class="wenzi4">
+                                <p>浓情比利时巧克力礼盒装</p>
+                                <p>205克/盒</p>
+                                <p>糖果零食</p>
+                                <p>￥120.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/抹茶蛋糕.png" alt="">
+                            <div class="wenzi4">
+                                <p>抹茶奶油小蛋糕礼盒装</p>
+                                <p>220克/盒</p>
+                                <p>美味西点</p>
+                                <p>￥60.00</p>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <!-- 服装部分 -->
+                <div class="title">
+                    <h3>服装</h3>
+                    <ul>
+                        <li><a href="#">热门</a></li>
+                        <li><a href="#">女装</a></li>
+                        <li><a href="#">奢侈品</a></li>
+                        <li><a href="#">裤装</a></li>
+                        <li><a href="#">衬衫</a></li>
+                        <li><a href="#">T恤</a></li>
+                        <li><a href="#">内衣</a></li>
+                    </ul>
+                    <a href="#">查看全部<span></span></a>
+                </div>
+                <div class="tupian">
+                    <div class="tupian1">
+                        <img src="./uploads/商品介绍卡片-服饰.png" alt="">
+                    </div>
+                    <div class="tupian2">
+                        <div class="tupian2-item">
+                            <img src="./uploads/鞋.png" alt="">
+                            <div class="wenzi4">
+                                <p>双味千层，手抓饼烤肉组合</p>
+                                <p>240g/袋 4片装</p>
+                                <p>加热即食</p>
+                                <p>￥719.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/jessyline.png" alt="">
+                            <div class="wenzi4">
+                                <p>云南甘蔗慢熬红糖馒头</p>
+                                <p>220g/袋 5个装</p>
+                                <p>加热即食</p>
+                                <p>￥699.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/打底衫.png" alt="">
+                            <div class="wenzi4">
+                                <p>日式风味小圆饼</p>
+                                <p>圆形【海盐味】</p>
+                                <p>糖果零食</p>
+                                <p>￥229.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/文艺袜子.png" alt="">
+                            <div class="wenzi4">
+                                <p>全麦奶油浓香小面包</p>
+                                <p>50g*12袋</p>
+                                <p>美味西点</p>
+                                <p>￥14.50</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/裙子.png" alt="">
+                            <div class="wenzi4">
+                                <p>秘制外皮五福摩提大福点心</p>
+                                <p>150g/盒</p>
+                                <p>美味西点</p>
+                                <p>￥179.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/皮带.png" alt="">
+                            <div class="wenzi4">
+                                <p>水果面膜韩国蜂蜜柚子茶</p>
+                                <p>560g/瓶</p>
+                                <p>冲调饮品</p>
+                                <p>￥565.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/帆布鞋.png" alt="">
+                            <div class="wenzi4">
+                                <p>浓情比利时巧克力礼盒装</p>
+                                <p>205克/盒</p>
+                                <p>糖果零食</p>
+                                <p>￥99.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/裤子.png" alt="">
+                            <div class="wenzi4">
+                                <p>抹茶奶油小蛋糕礼盒装</p>
+                                <p>220克/盒</p>
+                                <p>美味西点</p>
+                                <p>￥269.00</p>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <!-- 餐厨部分 -->
+                <div class="title">
+                    <h3>餐厨</h3>
+                    <ul>
+                        <li><a href="#">热门</a></li>
+                        <li><a href="#">厨具</a></li>
+                        <li><a href="#">水具</a></li>
+                        <li><a href="#">灯具</a></li>
+                        <li><a href="#">五金</a></li>
+                        <li><a href="#">家装材料</a></li>
+                        <li><a href="#">居家毫无</a></li>
+                    </ul>
+                    <a href="#">查看全部<span></span></a>
+                </div>
+                <div class="tupian">
+                    <div class="tupian1">
+                        <img src="./uploads/商品介绍卡片-餐厨.png" alt="">
+                    </div>
+                    <div class="tupian2">
+                        <div class="tupian2-item">
+                            <img src="./uploads/茶具.png" alt="">
+                            <div class="wenzi4">
+                                <p>双味千层，手抓饼烤肉组合</p>
+                                <p>240g/袋 4片装</p>
+                                <p>加热即食</p>
+                                <p>￥210.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/收纳盘.png" alt="">
+                            <div class="wenzi4">
+                                <p>云南甘蔗慢熬红糖馒头</p>
+                                <p>220g/袋 5个装</p>
+                                <p>加热即食</p>
+                                <p>￥32.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/奶泡.png" alt="">
+                            <div class="wenzi4">
+                                <p>日式风味小圆饼</p>
+                                <p>圆形【海盐味】</p>
+                                <p>糖果零食</p>
+                                <p>￥30.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/保温瓶.png" alt="">
+                            <div class="wenzi4">
+                                <p>全麦奶油浓香小面包</p>
+                                <p>50g*12袋</p>
+                                <p>美味西点</p>
+                                <p>￥69.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/餐具.png" alt="">
+                            <div class="wenzi4">
+                                <p>秘制外皮五福摩提大福点心</p>
+                                <p>150g/盒</p>
+                                <p>美味西点</p>
+                                <p>￥99.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/蛋糕模具.png" alt="">
+                            <div class="wenzi4">
+                                <p>水果面膜韩国蜂蜜柚子茶</p>
+                                <p>560g/瓶</p>
+                                <p>冲调饮品</p>
+                                <p>￥35.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/餐盘.png" alt="">
+                            <div class="wenzi4">
+                                <p>浓情比利时巧克力礼盒装</p>
+                                <p>205克/盒</p>
+                                <p>糖果零食</p>
+                                <p>￥12.99</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/水杯.png" alt="">
+                            <div class="wenzi4">
+                                <p>抹茶奶油小蛋糕礼盒装</p>
+                                <p>220克/盒</p>
+                                <p>美味西点</p>
+                                <p>￥56.99</p>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <!-- 居家部分 -->
+                <div class="title">
+                    <h3>居家</h3>
+                    <ul>
+                        <li><a href="#">热门</a></li>
+                        <li><a href="#">鲜花生活</a></li>
+                        <li><a href="#">家纺</a></li>
+                        <li><a href="#">创意礼品</a></li>
+                        <li><a href="#">个人配饰</a></li>
+                        <li><a href="#">生活日用</a></li>
+                    </ul>
+                    <a href="#">查看全部<span></span></a>
+                </div>
+                <div class="tupian">
+                    <div class="tupian1">
+                        <img src="./uploads/商品介绍卡片-居家.png" alt="">
+                    </div>
+                    <div class="tupian2">
+                        <div class="tupian2-item">
+                            <img src="./uploads/房间的彩虹.png" alt="">
+                            <div class="wenzi4">
+                                <p>双味千层，手抓饼烤肉组合</p>
+                                <p>240g/袋 4片装</p>
+                                <p>加热即食</p>
+                                <p>￥59.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/粉色玩偶.png" alt="">
+                            <div class="wenzi4">
+                                <p>云南甘蔗慢熬红糖馒头</p>
+                                <p>220g/袋 5个装</p>
+                                <p>加热即食</p>
+                                <p>￥39.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/水培植物.png" alt="">
+                            <div class="wenzi4">
+                                <p>日式风味小圆饼</p>
+                                <p>圆形【海盐味】</p>
+                                <p>糖果零食</p>
+                                <p>￥19.90</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/发卡.png" alt="">
+                            <div class="wenzi4">
+                                <p>全麦奶油浓香小面包</p>
+                                <p>50g*12袋</p>
+                                <p>美味西点</p>
+                                <p>￥29.90</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/花瓶.png" alt="">
+                            <div class="wenzi4">
+                                <p>秘制外皮五福摩提大福点心</p>
+                                <p>150g/盒</p>
+                                <p>美味西点</p>
+                                <p>￥29.90</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/简易书桌.png" alt="">
+                            <div class="wenzi4">
+                                <p>水果面膜韩国蜂蜜柚子茶</p>
+                                <p>560g/瓶</p>
+                                <p>冲调饮品</p>
+                                <p>￥79.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/懒人花盆.png" alt="">
+                            <div class="wenzi4">
+                                <p>浓情比利时巧克力礼盒装</p>
+                                <p>205克/盒</p>
+                                <p>糖果零食</p>
+                                <p>￥29.00</p>
+                            </div>
+                        </div>
+                        <div class="tupian2-item">
+                            <img src="./uploads/竹席枕套.png" alt="">
+                            <div class="wenzi4">
+                                <p>抹茶奶油小蛋糕礼盒装</p>
+                                <p>220克/盒</p>
+                                <p>美味西点</p>
+                                <p>￥39.00</p>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <!-- 第五部分 -->
+            <div class="content5">
+                <div class="title5">
+                    <h3>最新专题</h3>
+                    <a href="#">查看全部<span></span></a>
+                </div>
+                <div class="tupian5">
+                    <div class="img5">
+                        <img src="./uploads/最新专题1.png" alt="">
+                    </div>
+                    <div class="img5">
+                        <img src="./uploads/最新专题2.png" alt="">
+                    </div>
+                    <div class="img5">
+                        <img src="./uploads/最新专题3.png" alt="">
+                    </div>
+                </div>
+                <div class="tubiao">
+                    <div class="a">
+                        <div class="first">
+                            <img src="./uploads/收藏.png" alt="">
+                            <span>1220</span>
+                        </div>
+                        <div class="second">
+                            <img src="./uploads/浏览.png" alt="">
+                            <span>1800</span>
+                        </div>
+                        <div class="third">
+                            <img src="./uploads/评论.png" alt="">
+                            <span>246</span>
+                        </div>
+                    </div>
+                    <div class="a">
+                        <div class="first">
+                            <img src="./uploads/收藏.png" alt="">
+                            <span>1220</span>
+                        </div>
+                        <div class="second">
+                            <img src="./uploads/浏览.png" alt="">
+                            <span>1800</span>
+                        </div>
+                        <div class="third">
+                            <img src="./uploads/评论.png" alt="">
+                            <span>246</span>
+                        </div>
+                    </div>
+                    <div class="a">
+                        <div class="first">
+                            <img src="./uploads/收藏.png" alt="">
+                            <span>1220</span>
+                        </div>
+                        <div class="second">
+                            <img src="./uploads/浏览.png" alt="">
+                            <span>1800</span>
+                        </div>
+                        <div class="third">
+                            <img src="./uploads/评论.png" alt="">
+                            <span>246</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="one">
+            <div class="icon-item">
+                <div class="sprite sprite1 "></div>
+                <li>价格亲民</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite2 "></div>
+                <li>物流快捷</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite3 "></div>
+                <li>品质新鲜</li>
+            </div>
+            <div class="icon-item">
+                <div class="sprite sprite4 "></div>
+                <li>售后无忧</li>
+            </div>
+        </div>
+        <hr/>
+        <div class="two">
+            <div class="foot_wenzi">
+                <ul class="ul1">
+                    <li>购物指南</li>
+                    <li>配送方式</li>
+                    <li>关于我们</li>
+                    <li>售后服务</li>
+                    <li>服务热线</li>
+                </ul>
+                <ul class="ul2">
+                    <li>购物流程</li>
+                    <li>配送运费</li>
+                    <li>平台规则</li>
+                    <li>售后政策</li>
+                    <li>在线客服<img src="/uploads/客服.png" alt=""></li>
+
+                    <li>支付方式</li>
+                    <li>配送范围</li>
+                    <li>联系我们</li>
+                    <li>退款说明</li>
+                    <li>客服电话 400-0000-000</li>
+
+                    <li>售后规则</li>
+                    <li>配送时间</li>
+                    <li>问题反馈</li>
+                    <li>取消订单</li>
+                    <li>工作时间 周一至周日 8:00-18:00</li>
+                </ul>
+            </div>
+            <div class="foot_tupian">
+                <div>
+                    <img src="./images/wechat.png" alt="">
+                    <li>微信公众号</li>
+                </div>
+                <div>
+                    <img src="./images/app.png" alt="">
+                    <li>APP下载二维码</li>
+                </div>
+            </div>
+        </div>
+        <div class="three">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">售后服务</a></li>
+                <li><a href="#">配送与验收</a></li>
+                <li><a href="#">商务合作</a></li>
+                <li><a href="#">搜索推荐</a></li>
+            </ul>
+        </div>
+        <div class="name">
+            <ul>
+                <li>学号：25216950301</li>
+                <li>姓名：方丹琪</li>
+                <li>班级：25计科专升本3班</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // 检查登录状态并更新导航栏
+    function updateNavLoginStatus() {
+        const navContainer = document.querySelector('.nav-container ul');
+        const currentUser = JSON.parse(localStorage.getItem('xiaotu_current_user') || 'null');
+    
+        // 找到登录按钮的位置
+        const loginLi = Array.from(navContainer.children).find(li => 
+            li.classList.contains('login') || 
+            li.querySelector('a[href="login.html"]')
+        );
+        
+        if (currentUser) {
+            // 用户已登录，显示用户信息
+            if (loginLi) {
+                loginLi.innerHTML = `
+                    <div class="user-info">
+                        <div class="user-avatar">${currentUser.nickname.charAt(0)}</div>
+                        <span>${currentUser.nickname}</span>
+                        <button class="logout-btn" onclick="logout()">退出</button>
+                    </div>
+                `;
+                loginLi.classList.remove('login');
+            }
+        } else {
+            // 用户未登录，显示登录按钮
+            if (loginLi && !loginLi.querySelector('a[href="login.html"]')) {
+                loginLi.innerHTML = '<a href="login.html">请先登录</a>';
+                loginLi.classList.add('login');
+            }
+        }
+    }
+    function logout() {
+        localStorage.removeItem('xiaotu_current_user');
+        updateNavLoginStatus();
+        alert('已退出登录');
+        window.location.reload();
+    }
+    // 页面加载时更新登录状态
+    document.addEventListener('DOMContentLoaded', updateNavLoginStatus);
+
+    let current=0;
+    let autoPlay;
+    const item=document.querySelectorAll('.item');
+    const dots=document.querySelectorAll('.dots li');
+    //获取按钮元素
+    const prevBtn=document.querySelector('.prev');
+    const nextBtn=document.querySelector('.next');
+
+    startAutoPlay();/*初始自动播放*/
+
+    //为指示点添加事件监听
+    dots.forEach((dot,index)=>{
+        dot.addEventListener('click',()=>{
+            jumpToSlide(index);
+        });
+    });
+    //为左右按钮添加事件监听
+    prevBtn.addEventListener('click',prevSlider);
+    nextBtn.addEventListener('click',nextSlider);
+
+    function jumpToSlide(index){
+        current=index;
+        updateSlider();
+    }
+    function nextSlider(){
+        current=(current+1)%item.length;
+        updateSlider();
+    }
+    function prevSlider(){
+        current=(current-1+item.length)%item.length;
+        updateSlider();
+    }
+
+    function updateSlider(){
+        const items=document.querySelector('.items');
+        items.style.transform=`translateX(-${current * 100}%)`;
+
+        /*更新点的状态*/
+        dots.forEach((dot,index)=>{
+            dot.classList.toggle('active', index === current);
+        }) ;  
+    }
+    function startAutoPlay(){
+        autoPlay=setInterval(nextSlider,3000);
+    }
+</script>
+</html>
